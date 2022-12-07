@@ -1,4 +1,4 @@
-# Landing-page | Home page for E-commerce Web Site
+# Responsive Landing-page | Home page for E-commerce Web Site
 
 Created sample home page for E-commerce web site
 
