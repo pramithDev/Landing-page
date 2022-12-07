@@ -1,0 +1,75 @@
+.DS_Store
+
+application/cache/*
+!app/application/cache/index.html
+!app/application/cache/.htaccess
+
+application/logs/*
+!app/application/logs/index.html
+!app/application/logs/.htaccess
+
+composer.lock
+
+user_guide_src/build/*
+user_guide_src/cilexer/build/*
+user_guide_src/cilexer/dist/*
+user_guide_src/cilexer/pycilexer.egg-info/*
+/vendor/
+
+# IDE Files
+#-------------------------
+/nbproject/
+.idea/*
+
+## Sublime Text cache files
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+app/.htaccess
+temp
+app/application/config/config.php
+app/application/config/database.php
+app/application/logs/
+app/application/migrations/.info/*
+app/.tags
+app/.tags_sorted_by_file
+/temp/
+ttfontdata
+logs/
+thumbs.db
+dwsync.xml
+error_log
+
+############################################
+## Generic System Ignores
+syntax: glob
+
+!.gitignore
+Thumbs.db
+.idea
+node_modules
+
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Thumbs.db
+/Resources
+/package-lock.json
+/dist/assets/css/*.map
+/dist/assets/js/*.map

@@ -1,0 +1,23 @@
+@import 'base/fonts';
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/general';
+
+//BOOTSTRAP
+@import 'bootstrap/bootstrap';
+
+//SLICK
+@import 'slick/slick';
+@import 'slick/slick-theme';
+
+//LAY-OUT
+@import 'layout/header';
+@import 'layout/footer';
+
+//COMPONENTS
+@import 'components/main-banner';
+@import 'components/featured-box';
+@import 'components/card-item';
+
+//PAGES
+@import 'pages/home';

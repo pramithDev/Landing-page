@@ -1,0 +1,130 @@
+.banner-shape{
+    height: 500px;
+    background: $primary-shopping;
+
+    @include respond-to(bslarge){
+        height: 450px;
+    }
+
+    @include respond-to(phablet){
+        height: 340px;
+    }
+
+    @include respond-to(bsmobile){
+        height: 280px;
+    }
+}
+
+#shape1{
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0; 
+        bottom: 0; 
+        width: 0; 
+        height: 0;
+        border-right: $border-height solid $white;
+        border-top: $border-height solid transparent;
+        border-bottom: $border-height solid transparent;
+
+        @include respond-to(bslarge){
+            display: none;
+        }
+    }
+}
+
+#shape2{
+    &:after {
+        content: '';
+        position: absolute;
+        left: -$border-height; 
+        bottom: 0; 
+        width: 0; 
+        height: 0;
+        border-right: $border-height solid  $primary-shopping;
+        border-top: $border-height solid transparent;
+        border-bottom: $border-height solid transparent;
+    }
+
+    &:before{
+        content: '';
+        position: absolute;
+        z-index: 2;
+        height: $inner-box;
+        width: $inner-box;
+        background: #fff;
+        left: -70px;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+
+        @include respond-to(desktop){
+            height: $inner-box-desktop;
+            width: $inner-box-desktop;
+            left: -100px;
+        }
+    }
+}
+
+.main-banner{
+    position: relative;
+
+    .banner-text-main{
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        width:100%;
+        margin: 0 auto;
+    }
+
+    .banner-text{
+        color: $white;
+        max-width: 380px;
+        padding: 0 0 0 60px;
+
+        @include respond-to(phablet){
+            padding: 0 0 0 20px;
+        }
+
+        @include respond-to(bsmobile){
+            padding: 0 0 0 10px;
+        }
+
+        h1{
+            text-transform: capitalize;
+
+            @include respond-to(desktop){
+                font-size: 2.2rem;
+            }
+
+            
+            br {
+                @include respond-to(bslarge){
+                    display: none;
+                }
+            }
+
+            @include respond-to(phablet){
+                font-size: 1.8rem;
+            }
+
+            @include respond-to(bsmobile){
+                font-size: 1.5rem;
+            }
+        }
+
+        p{
+            font-size: 0.9rem;
+
+            @include respond-to(tabs){
+                font-size: 0.8rem;
+            }
+
+            @include respond-to(bsmobile){
+                font-size: 0.7rem;
+            }
+        }
+    }
+}

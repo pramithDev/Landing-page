@@ -1,0 +1,20 @@
+//Yoxall ===========================================================
+@font-face {
+  font-family: 'Yoxall-regular';
+  src: url('../fonts/Yoxall.woff2') format('woff2'),
+      url('../fonts/Yoxall.woff') format('woff'),
+      url('../fonts/Yoxall.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yoxall-bold';
+  src: url('../fonts/YoxallBold.woff2') format('woff2'),
+      url('../fonts/YoxallBold.woff') format('woff'),
+      url('../fonts/YoxallBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

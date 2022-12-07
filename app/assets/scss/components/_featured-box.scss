@@ -1,0 +1,111 @@
+.featured-box-wrapper:nth-child(1) .featured-box{
+    background: $primary-shopping;
+}
+
+.featured-box-wrapper:nth-child(2) .featured-box{
+    background: $box-bg2;
+
+    img{
+        left: -52px;
+
+        @include respond-to(bslarge){
+            left: -30px;
+        }
+    }
+}
+
+.featured-box-wrapper:nth-child(3) .featured-box{
+    background: $box-bg3;
+
+    img{
+        left: -60px;
+    }
+}
+
+.featured-box-wrapper{
+    @include respond-to(phablet){
+        margin-bottom: 50px;
+    }
+
+    .featured-box{
+        height: 280px;
+        padding: 0 45px;
+        position: relative;
+
+        @include respond-to(tabs){
+            height: 250px;
+        }
+
+        img{
+            position: absolute;
+            bottom: -40px;
+            left: -40px;
+        }
+    }
+
+    h3{
+        color: $white;
+        max-width: 150px;
+        font-weight: bold;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include respond-to(desktop){
+            font-size: 1.5rem;
+            max-width: 120px;
+        }
+
+        @include respond-to(tabs){
+            font-size: 1.4rem;
+        }
+
+        @include respond-to(phablet){
+            max-width: 500px;
+            font-size: 1.1rem;
+        }
+
+        @include respond-to(bsmobile){
+            font-size: 1rem;
+        }
+    }
+}
+
+.featured-box-main{
+    .custom-padding{
+        margin-right: -55px !important;
+        margin-left: -55px!important;
+      [class*="col-"] {
+        padding-right: 55px!important;
+        padding-left: 55px!important;
+    }
+
+        @include respond-to(desktop){
+                margin-right: -35px !important;
+                margin-left: -35px!important;
+            [class*="col-"] {
+                padding-right: 35px!important;
+                padding-left: 35px!important;
+            }
+        }
+
+        @include respond-to(tabs){
+                margin-right: -25px !important;
+                margin-left: -25px!important;
+            [class*="col-"] {
+                padding-right: 25px!important;
+                padding-left: 25px!important;
+            }
+        }
+
+        @include respond-to(phablet){
+                margin-right: -10px !important;
+                margin-left: -10px!important;
+            [class*="col-"] {
+                padding-right: 10px!important;
+                padding-left: 10px!important;
+            }
+        }
+
+    }
+}

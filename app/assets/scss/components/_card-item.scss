@@ -1,0 +1,157 @@
+.cards-wrapper-main{
+    padding: 60px 0;
+
+    @include respond-to(phablet){
+        padding: 40px 0;
+    }
+
+    @include respond-to(bsmobile){
+        padding: 30px 0;
+    }
+}
+
+.card-item-wrapper:nth-child(1) .card-item .card-image,
+.card-item-wrapper:nth-child(5) .card-item .card-image{
+    background: $primary-shopping;
+}
+
+.card-item-wrapper:nth-child(2) .card-item .card-image,
+.card-item-wrapper:nth-child(6) .card-item .card-image{
+    background: $box-bg3;
+}
+
+.card-item-wrapper:nth-child(3) .card-item .card-image,
+.card-item-wrapper:nth-child(4) .card-item .card-image{
+    background: $box-bg2;
+}
+
+.card-item-wrapper:nth-child(2n+0) .card-item{
+    margin-top: 80px;
+
+    @include respond-to(tab-ls){
+        margin-top: 50px;
+    }
+
+    @include respond-to(phablet){
+        margin-top: 0;
+    }
+}
+
+.card-item-wrapper:nth-child(4n+0) .card-item,
+.card-item-wrapper:nth-child(6n+0) .card-item{
+    margin-top: -80px;
+
+    @include respond-to(tab-ls){
+        margin-top: -50px;
+    }
+
+    @include respond-to(phablet){
+        margin-top: 0;
+    }
+}
+
+.card-item{
+    display: block;
+}
+
+.card-item-wrapper{
+    @include respond-to(phablet){
+        margin-bottom: 30px;
+    }
+
+    a:hover{
+        text-decoration: none;
+    }
+    
+    .card-image{
+        height: 380px;
+        position: relative;
+
+        @include respond-to(tab-ls){
+            height: 300px;
+        }
+
+        img{
+            width: 90px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    .card-details{
+        padding: 12px 15px 30px 5px;
+
+        @include respond-to(phablet){
+            padding-bottom: 10px;
+        }
+
+        h6,p{
+            color: $card-text;
+        }
+
+        h6{
+            font-weight: 700;
+            margin-bottom: 5px;
+
+            @include respond-to(tabs){
+                font-size: 0.9rem;
+            }
+        }
+
+        p{
+            font-size: 0.9rem;
+            line-height: 1;
+            font-weight: 500;
+            max-width: 310px;
+
+            @include respond-to(tabs){
+                font-size: 0.8rem;
+            }
+        }
+
+        .price{
+            text-align: center;
+
+            .sell-price{
+                font-weight: 500;
+                color: $sell-price;
+                margin-right: 30px;
+                font-size: 1.1rem;
+
+                &:before{
+                    bottom: 4px;
+                    left: 2px;
+                    height: 11px;
+                    width: 10px;
+                    border: 1px solid $sell-price;
+                }
+            }
+
+            .old-price{
+                font-size: 0.9rem;
+                color: $old-price;
+                text-decoration: line-through;
+
+                &:before{
+                    bottom: 4px;
+                    height: 10px;
+                    width: 9px;
+                    border: 1px solid $old-price;
+                }
+            }
+
+            span{
+                line-height: 1;
+                position: relative;
+                &:before{
+                    content:'';
+                    position: absolute;
+                    left: 0;
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}

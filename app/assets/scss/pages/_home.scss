@@ -1,0 +1,455 @@
+.featured-box-main{
+    padding: 100px 0;
+
+    @include respond-to(desktop){
+        padding: 70px 0 80px;
+    }
+
+    @include respond-to(phablet){
+        padding: 40px 0;
+    }
+}
+
+.featured-box-main .container{
+    @include respond-to(phablet){
+        padding: 0 60px !important;
+    }
+    
+    @include respond-to(bsmobile){
+        padding: 0 35px !important;
+    }
+}
+
+//FEATURED CATEGORY
+.featured-category-main{
+    position: relative;
+}
+
+.cross-horizontal{
+    &:before,
+    &:after{
+        content: '';
+        position: absolute;
+        height: 100px;
+        z-index: -1;
+        width: calc(100%-100px);
+
+        @include respond-to(xxlargemin){
+            width: calc(100%-150px);
+        }
+
+        @include respond-to(xlarge){
+            width: calc(100%-50px);
+        }
+
+        @include respond-to(tab-ls){
+            width: 100%;
+        }
+
+        @include respond-to(phablet){
+            display: none;
+        }
+    }
+
+    &:before{
+        left: 100px;
+        top: 320px;
+        background: $box-bg3;
+
+        @include respond-to(xxlargemin){
+            left: 150px;
+        }
+
+        @include respond-to(xlarge){
+            left: 50px;
+        }
+
+        @include respond-to(tab-ls){
+            left: 0;
+            top: 300px;
+        }
+    }
+
+    &:after{
+        right: 100px;
+        bottom: 380px;
+        background: $primary-shopping;
+
+        @include respond-to(xxlargemin){
+            right: 150px;
+        }
+
+        @include respond-to(xlarge){
+            right: 50px;
+        }
+
+        @include respond-to(tab-ls){
+            right: 0;
+            bottom: 360px;
+        }
+    }
+}
+
+.featured-title{
+    background: $primary-shopping;
+    text-align: center;
+    padding: 30px 0;
+
+    @include respond-to(phablet){
+        padding: 20px 0;
+    }
+
+    h3{
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $white;
+        padding: 0 15px 2px;
+        border-bottom: 4px solid $white;
+        margin: 0;
+
+        @include respond-to(desktop){
+            font-size: 1.6rem;
+        }
+
+        @include respond-to(tabs){
+            font-size: 1.4rem;
+        }
+
+        @include respond-to(phablet){
+            font-size: 1.3rem;
+        }
+
+        @include respond-to(bsmobile){
+            font-size: 1.1rem;
+        }
+    }
+}
+
+
+//MAIN SLIDER
+.main-slider-wrapper{
+    .slick-next {
+        right: 60px;
+    }
+    
+    .slick-prev {
+        left: 60px;
+        z-index: 2;
+    }
+
+    .slick-prev:before, .slick-next:before{
+        display: none;
+    }
+
+    .slick-prev,.slick-next{
+        width: 60px;
+        height: 100px;
+
+        @include respond-to(desktop){
+            width: 40px;
+            height: 80px;
+        }
+
+        @include respond-to(tab-ls){
+            width: 30px;
+            height: 70px;
+        }
+
+        @include respond-to(phablet){
+            display: none !important;
+        }
+    }
+
+    .slick-prev{
+        background: url('../images/nav-left.png')no-repeat center center;
+        background-size: contain;
+    }
+    
+    .slick-next{
+        background: url('../images/nav-right.png')no-repeat center center;
+        background-size: contain; 
+    }
+
+    .slick-slide img {
+        display: inline-block;
+    }
+   
+    .slide{
+        background: $primary-shopping;
+        position: relative;
+        height: 500px;
+
+        @include respond-to(tab-ls){
+            height: 400px;
+        }
+
+        .image-caption{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @include respond-to(phablet){
+                text-align: center;
+            }
+
+            img{
+                width: 250px;
+                height: auto;
+
+                @include respond-to(desktop){
+                    width: 200px;
+                }
+                
+                @include respond-to(tab-ls){
+                    width: 150px;
+                }
+            }
+
+            h4{
+                font-size: 4.8rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                display: inline-block;
+                vertical-align: middle;
+                max-width: 200px;
+                line-height: 1.4;
+                padding: 0 0 0 20px;
+                color: $white;
+
+                @include respond-to(desktop){
+                    font-size: 3.5rem;
+                }
+
+                @include respond-to(desktop){
+                    font-size: 2.8rem;
+                }
+
+                @include respond-to(phablet){
+                    max-width: 400px;
+                    padding: 0;
+                    font-size: 1.8rem;
+                    display: block;
+                }
+
+                @include respond-to(bsmobile){
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
+
+.main-heading-with-text{
+    text-align: center;
+    margin-top: 60px;
+
+    @include respond-to(phablet){
+        margin-top: 45px;
+    }
+
+    h2{
+        font-size: 2.8rem;
+        text-transform: capitalize;
+        font-weight: 700;
+        margin-bottom: 6px;
+        color: $nav-text;
+
+        @include respond-to(desktop){
+            font-size: 2.2rem;
+        }
+
+        @include respond-to(tabs){
+            font-size: 1.9rem;
+        }
+
+        @include respond-to(phablet){
+            font-size: 1.7rem;
+        }
+
+        @include respond-to(bsmobile){
+            font-size: 1.4rem;
+        }
+    }
+
+    p{
+        font-size: 0.9rem;
+        color: $nav-text;
+        font-weight: 500;
+
+        @include respond-to(phablet){
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.tab-items{
+    padding-top: 25px;
+
+    .nav-tabs{
+        border: none;
+    }
+
+    .nav-link{
+        text-transform: uppercase;
+        border-radius: 0;
+        border: 1px solid $tab-border;
+        padding: 8px 28px;
+
+        @include respond-to(tabs){
+            font-size: 0.8rem;
+        }
+
+        &:hover{
+            border: 1px solid $tab-border;
+        }
+
+        &.active{
+            background: $box-bg3;
+            color: $white;
+            border: 1px solid $tab-border-active;
+        }
+    }
+
+    
+    .card-item-wrapper .card-details{
+        padding-bottom: 45px;
+
+        @include respond-to(phablet){
+            padding-bottom: 10px;
+        }
+    }
+}
+
+.no-margin.card-item-wrapper:nth-child(2n+0) .card-item {
+    margin-top: 0;
+}
+
+//VIDEO IMAGE SECTION
+.video-image-cards-wrapper{
+    padding: 80px 0;
+
+    @include respond-to(phablet){
+        padding: 60px 0 40px;
+    }
+
+    @include respond-to(bsmobile){
+        padding: 40px 0 30px;
+    }
+
+    .video-main{
+        background: $primary-shopping;
+        position: relative;
+        height: calc(100%-40px);
+
+        @include respond-to(phablet){
+            min-height: 300px;
+            height: auto;
+        }
+
+        @include respond-to(bsmobile){
+            min-height: 200px;
+        }
+
+        img{
+            width: 80px;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @include respond-to(phablet){
+                width: 60px;
+            }
+        }
+    }
+
+    h6{
+        height: 40px;
+        margin: 0;
+        color: $hot-section;
+        font-size: 0.9rem;
+        padding: 10px 0 0 5px;
+
+        @include respond-to(bslarge){
+            font-size: 0.75rem;
+        }
+    }
+
+    .image-main{
+        min-height: 140px;
+        position: relative;
+
+        @include respond-to(phablet){
+            min-height: 170px;
+        }
+
+        img{
+            width: 60px;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .top-items{
+        .image-main{
+            background: $box-bg3;
+        }
+    }
+
+    .bottom-items{
+        .image-main{
+            background: $box-bg2;
+        }
+    }
+}
+
+//LINE IMAGE SLIDER
+.line-image-slider{
+    .slick-slide{
+        &:focus{
+            outline: 0;
+        }
+    }
+
+    .line-slide{
+        height: 350px;
+        position: relative;
+        background: $primary-shopping;
+        box-shadow: -7px 0 8px 0px rgba(0,0,0,.2);
+
+        @include respond-to(tabs){
+            height: 300px;
+        }
+
+        @include respond-to(bsmobile){
+            height: 250px;
+        }
+
+        @include respond-to(mobilesm){
+            box-shadow: none;
+        }
+
+        img{
+            width: 120px;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+            @include respond-to(slarge){
+                width: 110px;
+            }
+
+            @include respond-to(tabs){
+                width: 80px;
+            }
+        }
+    }
+}
